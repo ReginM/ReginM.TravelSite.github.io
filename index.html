@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ancient Seekers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel ="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <img src ="https://www.planetware.com/wpimages/2022/02/world-top-rated-tourist-attractions-corcovado-cristo-redentor-rio-de-janeiro.jpg"></img>
+    <h3 class="w3-padding-84"><b>ANCIENT SEEKERS<br></b></h3>
+  </div>
+  <div class="w3-bar-block"> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">HOME</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">TOURIST SPOTS</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">FACTS</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ABOUT US</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">CONTACT</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>TRAVEL AROUND THE ANCIENT WORLD</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Tourist Spots.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-italy-rome-colosseum.jpg" style="width:100%" onclick="onClick(this)" alt="The Colosseum, Rome"> 
+      <img src="https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-peru-machu-picchu-overview.jpg" style="width:100%" onclick="onClick(this)" alt="Machu Pichu, Peru">
+      <img src="https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-greece-athens-acropolis-moon.jpg" style="width:100%" onclick="onClick(this)" alt="The Acropolis, Athens"> 
+      <img src="https://www.planetware.com/wpimages/2022/02/world-top-rated-tourist-attractions-chichen-itza-mexico.jpg" style="width:100%" onclick="onClick(this)" alt="Chichen Itza, Mexico">    
+      
+  </div>
+  
+
+    <div class="w3-half">
+      <img src="https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-england-stonehenge.jpg" style="width:100%" onclick="onClick(this)" alt="Stonehenge, England">
+      <img src="https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-egypt-pyramids-giza.jpg" style="width:100%" onclick="onClick(this)" alt="Pyramids of Giza, Egypt">
+      <img src="https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-china-great-wall.jpg" style="width:100%" onclick="onClick(this)" alt="The Great Wall, China">
+      <img src="https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-china-forbidden-city.jpg" style="width:100%" onclick="onClick(this)" alt="The Forbidden City, China">
+    </div>
+  </div>
+
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>PROMOTIONAL VIDEOS</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b></b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+  </div>
+  
+    <div class="center">
+      <video width="480" height="340" controls>
+      <source src="assets/Seven Wonders of the Ancient World.mp4" type="video/mp4">
+    </video>
+   </div>
+
+   <div class="center1">
+      <video width="480" height="360" controls onclick="onClick(this)">
+      <source src="assets/Seven Wonders of the Middle Ages.mp4" type="video/mp4">
+      </video>
+    </div>
+  
+  
+ 
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Facts.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The ancient world was a time of great exploration, adventure and discovery. With the advancement of transportation methods like ships, caravans and horses, people were able to travel to different parts of the world and see new sights and experience new cultures. During this time, travelers could visit some of the world's most fascinating and mysterious destinations, including ancient cities, religious sites, and natural wonders.</p>
+    <p>One of the most famous ancient destinations was the city of Rome, the center of the Roman Empire. Here, travelers could marvel at the grand architecture and monuments, including the Colosseum, the Pantheon, and the Roman Forum. The city was also famous for its public baths, markets, and monumental aqueducts, all of which showcased the advanced technology and engineering of the time.</p>
+    <p>Another popular destination was the ancient city of Athens, Greece. This city was the birthplace of democracy and home to some of the most famous philosophers, such as Socrates, Plato, and Aristotle. Here, travelers could visit the Parthenon, the Acropolis and the famous theater of Dionysus, where some of the greatest works of Greek drama were performed.</p>
+    <p>Egypt was another major destination in the ancient world, attracting travelers from all over to see its magnificent pyramids, temples and the Sphinx. The great pyramids of Giza, built over 4,500 years ago, were one of the Seven Wonders of the World and remain a major attraction for travelers to this day. Visitors could also explore the temples of Karnak and Luxor, which were dedicated to the gods and goddesses of ancient Egypt.</p>
+    <p>The ancient world was also home to many natural wonders, including Mount Olympus in Greece, the Mausoleum at Halicarnassus, and the Hanging Gardens of Babylon. These sites captivated travelers with their beauty and grandeur and offered a glimpse into the mysterious and awe-inspiring world of ancient civilizations.</p>
+    <p>In conclusion, the ancient world was a time of great travel and exploration, offering a diverse range of destinations that continue to inspire and captivate travelers to this day. From the grand cities of Rome, Athens and Egypt to the natural wonders of Mount Olympus and the Hanging Gardens of Babylon, the ancient world was a fascinating and mysterious place that is well worth exploring.</p>
+    <p>This website will show you the way some of the greatest structures man has ever made back from a time where man begins to be innovative. You can travel to these places at once with our help!</p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>About Us.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Welcome to our traveling website, where we offer a world of adventure and discovery at your fingertips. Our team of travel experts has scoured the globe to bring you the most fascinating destinations, from hidden gems to bucket-list favorites.</p>
+    <p>At our website, we believe that travel is more than just a way to escape the everyday. It's an opportunity to broaden your horizons, deepen your understanding of the ancient world, and create memories that will last a lifetime. That's why we're dedicated to helping you plan your perfect trip, whether it's a romantic getaway, a family vacation, or an adventure of a lifetime.
+    </p>
+    <p><b>This is the team that would welcome your travels!</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/team1.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Bin Laden</h3>
+          <p class="w3-opacity">CEO, Founder, Designer</p>
+          <p>Hi! I am the creator of this team and this website. My goal is to bring and show the majestic places of the ancient world to the modernity</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/team2.png" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Adonnis</h3>
+          <p class="w3-opacity">Travel Guide</p>
+          <p>Hi! I will be your travel guide during your travels. I will help anything that you ask of me!</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/team3.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Wag Kanang Mawala</h3>
+          <p class="w3-opacity">Travel Manager & Handler</p>
+          <p>Hi! i am the manager and the handler of your travels, I will schedule and book all of your destinations for you!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(243, 0, 0)" class="w3-round">
+    <p>Do you want us to book your travels? Fill out the form and fill me in with the details :) We love helping adventure seekers!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-black w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+  <div class="center2">
+  <footer>
+    <p>Author: Rej Mirasol<br>
+    <a href="rejrej16">rejrej16</a></p>
+  </footer>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
